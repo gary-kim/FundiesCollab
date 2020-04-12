@@ -51,6 +51,6 @@ class RoomData {
   }
 }
 
-const roomData = new RoomData(new Redis(), 60 * 60 * 24 * 7)
+const roomData = new RoomData(new Redis(process.env.REDIS_ADDRESS || undefined), 60 * 60 * 24 * 7)
 
 module.exports = roomData
